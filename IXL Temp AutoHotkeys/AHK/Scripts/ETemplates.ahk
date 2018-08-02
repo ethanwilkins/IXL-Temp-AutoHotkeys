@@ -1,6 +1,5 @@
 #NoTrayIcon
-#Persistent
-#SingleInstance, force 
+
 ;----------------------------------- E-MAIL TEMPLATES -------------------------------------------------------------------------------------------------------------
 /*
 Name: <FIRSTNAME> <LASTNAME>
@@ -358,7 +357,7 @@ Please let me know if you have any other questions or problems with this process
 ;3.01 Initial Contact
 ::x301::
 (
-Welcome to IXL! My name is NAME and I am your Account SPECIALIST/COORDINATOR. I will be assisting you in getting your students and teachers started with the program.
+Welcome to IXL! I will be assisting you in getting your students and teachers started with the program.
 
 To get started, you will need to compile an Excel file with two sheets, one for your students and one for your teachers. You may use the attached template file to work from, or you can create your own.
 
@@ -366,7 +365,7 @@ The last column in the student file will allow you to add students to your teach
 
 If a teacher has a trial account, please exclude them from the teacher list. They will receive instructions on how to merge their account into the new subscription.
 
-Once the file is ready, please upload it to our secure uploading page using the following link: XXX
+Once the file is ready, please upload it to our secure uploading page using the following link: https://www.ixl.com/admin/upload-roster
 
 Then follow the instructions on that page to format your files and upload your roster. For your convenience, here is a link to our Upload Roster Quick Start Guide (https://www.ixl.com/userguides/IXLQuickStart_UploadRoster.pdf).
 
@@ -671,7 +670,7 @@ Alternatively, you may manually add the new students through your administrator 
 
     1. Sign into your IXL admin account
     2. Go to the Students page under the Account Management tab
-    3. Select "Add new student”
+    3. Select "Add new student"
     4. Input the students information
 
 Let me know if you have any questions - I am always happy to help!
@@ -728,7 +727,7 @@ My name is NAME, my role is to assist you in setting up your account, which incl
 
 There are two ways you can upload your roster data to IXL.
 
-The first way is to upload and edit roster files manually through the "Upload Roster” section of your IXL portal which will allow you to create teacher and student rosters.  Choosing to upload the files yourself allows you to have full control of adding or removing teachers and students at your discretion. If you have any trouble please click the "Work With An Account Specialist” button to transfer the file to me securely and I will be happy to assist you.
+The first way is to upload and edit roster files manually through the "Upload Roster" section of your IXL portal which will allow you to create teacher and student rosters.  Choosing to upload the files yourself allows you to have full control of adding or removing teachers and students at your discretion. If you have any trouble please click the "Work With An Account Specialist" button to transfer the file to me securely and I will be happy to assist you.
 The following is a link to our manual rostering specifications, which details the format the files need your data to be in:
 
 https://www.ixl.com/userguides/IXLQuickStart_UploadRoster.pdf

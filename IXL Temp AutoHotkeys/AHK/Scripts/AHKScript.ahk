@@ -1,84 +1,52 @@
-#SingleInstance, force 
+#SingleInstance, force
 #Persistent
 #NoTrayIcon
-#IfWinNotExist, `%A_ScriptDir`%\auxillary\testfile.ahk 
+#IfWinNotExist, `%A_ScriptDir`%\auxillary\testfile.ahk
 {
     Run, %A_ScriptDir%\auxillary\testfile.ahk
-} 
+}
 
 OnExit("ExitFunc")
 
 ExitFunc()
 {
-    DetectHiddenWindows, On 
+    DetectHiddenWindows, On
     WinClose, %A_ScriptDir%\auxillary\testfile.ahk ahk_class AutoHotkey
-} 
+}
 
 
 ;----------------------------------- HOTSTRINGS ---------------------------------------------------------------------------------------------------------
 ::lmk::Please let me know if you have any questions.
 ::tfyr::Thanks for your reply.
 ::tfcu::Thanks for contacting us.
-::ihte::I hope this e-mail finds you well.
-::tro::Thanks for reaching out{!}
-::tgb::Thanks for getting back to me{!}
-::gq::Great question{!}
-::ifhb::I look forward to hearing back from you{!}
-::fsu::Your account currently has fall setup enabled. IXL's fall setup tool will help automatically promote students to the next grade level and clear class rosters two weeks prior to your first day of school, on [date]. Please advise if you would like this tool to remain enabled, or I am happy to assist you if you would like to have it turned off. 
-::yrsa::Your roster has been successfully added. 
-::ysbr::Your student has been restored.
 ;----------------------------------- LINKS AND URLS -------------------------------------------------------------------------------------------------------------
-;::qssr::https://www.ixl.com/userguides/IXLQuickStart_SiteRoster.pdf 
-;::afaq::https://www.ixl.com/help-center/School-administrators/665924
-;::aqsg::https://www.ixl.com/userguides/IXLQuickStart_Administrator.pdf
+::qssr::https://www.ixl.com/userguides/IXLQuickStart_SiteRoster.pdf
+::afaq::https://www.ixl.com/help-center/School-administrators/665924
+::aqsg::https://www.ixl.com/userguides/IXLQuickStart_Administrator.pdf
 
 ;----------------------------------- XSTRINGS ------------------------------------------------------------------------------------------------------------------
 ::xsig::Sincerely,{enter}{enter}Assistant to <SENIORSPECIALIST>{enter}<FIRSTNAME> <LASTNAME>{enter}IXL Account Services{enter}{enter}Mailing Address:{enter}IXL Learning{enter}777 Mariners Island Blvd., Suite 600{enter}San Mateo, CA 94404 USA{enter}{enter}Toll-free 1.855.255.8800 | Direct 1.650.372.4300 | Fax: 1.650.372.4301
 ::xpswd::I've sent you a password reset link to your e-mail. Let me know if you don't see it.
 ::xsi::
-(
-Please send me a complete student list with the following student information in separate columns of an Excel spreadsheet:
-
-    -First name
-    -Last name
-    -Student ID number
-    -Grade level
-    -Teacher last name or teacher email
-
-Note that student's first name, last name, student ID, and grade level are required. 
-    )
 ::xchkin::I'm just reaching out to check-in on how your IXL account set-up is going?
-::xintro::My name is <FIRSTNAME> and I am assisting <SENIORSPECIALIST> during this busy time of year. 
-::xur:: We have a new tool available in your administrator account  to ensure security and privacy for your data. You can simply click the  "Upload roster files" link found under the Account Management tab to access a secure upload page for all of your student and teacher
-
+::xintro::My name is Forrest and I am assisting Evan, our Account Coordinator, during this busy time of year.
 ;-----------------------------------DATE STAMP FUNCTION-------------------------------------------------------------------------------------------
 :R*?:ddd::
 FormatTime, CurrentDateTime,, MM/dd/yyyy
-SendInput %CurrentDateTime% + <INTIALS>{enter}{enter}{enter}{enter}{Up}{Up}
+SendInput %CurrentDateTime% + FW --------------------------------------------------------------------------{enter}{enter}{enter}{enter}{Up}{Up}
 ;-----------------------------------SPELLCORRECT--------------------------------------------------------------------------------------------------
-::signin::sign-in
-:*?:sign in::sign-in 
-:*?:recieve::receive 
+:*?:recieve::receive
 ::setup::set-up
 ::checkin::check-in
 :*?:email::e-mail
 :*?:seperate::separate
-:*?:reccommend::recommend 
-::ixl::IXL 
-::teh::the 
-::managment::management 
+:*?:reccommend::recommend
+::ixl::IXL
+::teh::the
+::managment::management
 :*?:neccessary::necessary
-:*:alot::a lot 
-::can not::cannot 
-::math::Math 
-::ela::ELA
-::science::Science 
-::social studies::Social Studies 
-:?*:login::sign-in
 ;----------------------------------- SCRUBBING FUNCTION -------------------------------------------------------------------------------------------------------------
-;FILE SCRUBBING
-^+q::
-;enables editing 
+;enables editing
 Send !f
 sleep, 250
 Send i
@@ -86,11 +54,11 @@ sleep, 250
 Send e
 sleep, 250
 
-;resets to main window 
+;resets to main window
 Send {Esc}{Esc}{Esc}
 sleep, 500
 
-;scrubbing block 
+;scrubbing block
 Send ^{Home}
 sleep, 500
 Send, ^+{End}
@@ -105,7 +73,7 @@ Send v
 Send {enter}
 sleep, 250
 
-;sorts file to eliminate blank lines 
+;sorts file to eliminate blank lines
 Send ^{Home}
 sleep, 250
 Send, {down}
@@ -114,16 +82,17 @@ Send ^+{End}
 sleep, 250
 Send {alt}
 sleep, 250
-Send a 
+Send a
 sleep, 250
-send sa 
+send sa
 sleep, 500
 
 Return
 
+
 ;ALL IN ONE SCRUBBING AND SAVING FUNCTION ---------------------------------------------------------------------
 ^+l::
-;enables editing 
+;enables editing
 Send !f
 sleep, 250
 Send i
@@ -131,11 +100,11 @@ sleep, 250
 Send e
 sleep, 250
 
-;resets to main window 
+;resets to main window
 Send {Esc}{Esc}{Esc}
 sleep, 500
 
-;scrubbing block 
+;scrubbing block
 Send ^{Home}
 sleep, 500
 Send, ^+{End}
@@ -150,7 +119,7 @@ Send v
 Send {enter}
 sleep, 250
 
-;sorts file to eliminate blank lines 
+;sorts file to eliminate blank lines
 Send ^{Home}
 sleep, 250
 Send, {down}
@@ -159,12 +128,12 @@ Send ^+{End}
 sleep, 250
 Send {alt}
 sleep, 250
-Send a 
+Send a
 sleep, 250
-send sa 
+send sa
 sleep, 500
 
-;saving block 
+;saving block
 Send {F12}
 sleep, 500
 Send {Esc}
@@ -175,15 +144,15 @@ Send {F4}
 Send {F6}{F6}{F6}{F6}{F6}
 sleep, 500
 Send d ;resets file type
-Send c ;sets file type to csv 
-Send !d ;moves to address bar 
+Send c ;sets file type to csv
+Send !d ;moves to address bar
 sleep, 250
 Send ^a
 sleep, 250
 Send %A_Desktop%\Rosters ;file path
 Send, {enter}
 sleep, 250
-Send {Tab}{Tab}{Tab}{Tab}{Tab}{Tab} ;navigates back to filename bar 
+Send {Tab}{Tab}{Tab}{Tab}{Tab}{Tab} ;navigates back to filename bar
 ;MsgBox, Done
 Return
 
@@ -196,14 +165,14 @@ ACC#: Searches SubMan and salesforce
 Case#: Searches SalesForce
 */
 
-^+s:: 
+^+s::
 Clipboard =
 Send ^c
 ClipWait
 contents := Clipboard
 contentsTrimmed = %contents%
 if RegExMatch(contentsTrimmed, "[\w-_.]+@(?:\w+(?::\d+)?\.){1,3}(?:\w+\.?){1,2}", email) {
-    
+
     Run, "chrome.exe" ; CREATES A NEW WINDOW OF CHROME
 
     ;QUIA SEARCH
@@ -214,7 +183,7 @@ if RegExMatch(contentsTrimmed, "[\w-_.]+@(?:\w+(?::\d+)?\.){1,3}(?:\w+\.?){1,2}"
     Send, ^v
     Send, {enter}
     Clipboard := email
-    
+
     ;SALES FORCE SEARCH
     Send, ^t
     var1 := "https://ixl.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=0JZ&sen=001&sen=02s&sen=068&sen=003&sen=00T&sen=00U&sen=005&sen=500&sen=00O&str=" . email
@@ -237,17 +206,17 @@ if RegExMatch(contentsTrimmed, "[\w-_.]+@(?:\w+(?::\d+)?\.){1,3}(?:\w+\.?){1,2}"
     Clipboard := var3
     Send, ^v
     Send, {enter}
-    
-     ;sends the screen to the right 
+
+     ;sends the screen to the right
     sleep, 500
-    Send, #+{Right} 
-    
+    Send, #+{Right}
+
 } else {
     Length := StrLen(contentsTrimmed)
     if (Length=8){
-        
+
         ;Run, "chrome.exe" ; CREATES A NEW WINDOW OF CHROME
-        
+
         ;SALESFORCE SEARCH
         winactivate ahk_exe chrome.exe
         Send, ^t
@@ -260,7 +229,7 @@ if RegExMatch(contentsTrimmed, "[\w-_.]+@(?:\w+(?::\d+)?\.){1,3}(?:\w+\.?){1,2}"
         Send, {enter}
 
     } else if (Length>8) {
-        
+
         ;Run, "chrome.exe" ; CREATES A NEW WINDOW OF CHROME
 
         ;SUBMANAGER SEARCH
@@ -268,22 +237,22 @@ if RegExMatch(contentsTrimmed, "[\w-_.]+@(?:\w+(?::\d+)?\.){1,3}(?:\w+\.?){1,2}"
         StringTrimLeft, NewStr, contentsTrimmed, 4 ;TRIMS PRECEDING A##- SO IT WOULD WORK WITH SALES FORCE
         Send, ^t
         Variable := "https://secure.quia.com/actions/subManager/account/view/" . contentsTrimmed
-        ClipWait    
+        ClipWait
         Clipboard := Variable
         Send, ^v
-        Send, {enter} 
+        Send, {enter}
 
         ;SALESFORCE SEARCH
         Send, ^t
         var1 := "https://ixl.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=0JZ&sen=001&sen=02s&sen=068&sen=003&sen=00T&sen=00U&sen=005&sen=500&sen=00O&str=" . NewStr
-        var2 := var1 . "&isdtp=vw&isWsVw=true&nonce=02541659de9dde0d96e44d154840e14be6f2bb3fcc1022859c569e3e55629581&sfdcIFrameOrigin=https%3A%2F%2Fixl.my.salesforce.com"   
+        var2 := var1 . "&isdtp=vw&isWsVw=true&nonce=02541659de9dde0d96e44d154840e14be6f2bb3fcc1022859c569e3e55629581&sfdcIFrameOrigin=https%3A%2F%2Fixl.my.salesforce.com"
         ClipWait
         Clipboard := var2
         sleep, 500
         Send, ^v
         Send, {enter}
 
-    } else { 
+    } else {
 
         ;Run, "chrome.exe" ; CREATES A NEW WINDOW OF CHROME
 
@@ -291,15 +260,15 @@ if RegExMatch(contentsTrimmed, "[\w-_.]+@(?:\w+(?::\d+)?\.){1,3}(?:\w+\.?){1,2}"
         winactivate ahk_exe chrome.exe
         Send, ^t
         Variable := "https://secure.quia.com/actions/subManager/account/view/" . contentsTrimmed
-        ClipWait    
+        ClipWait
         Clipboard := Variable
         Send, ^v
-        Send, {enter}   
+        Send, {enter}
 
         ;SALESFORCE SEARCH
         Send, ^t
         var1 := "https://ixl.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=0JZ&sen=001&sen=02s&sen=068&sen=003&sen=00T&sen=00U&sen=005&sen=500&sen=00O&str=" . contentsTrimmed
-        var2 := var1 . "&isdtp=vw&isWsVw=true&nonce=02541659de9dde0d96e44d154840e14be6f2bb3fcc1022859c569e3e55629581&sfdcIFrameOrigin=https%3A%2F%2Fixl.my.salesforce.com"   
+        var2 := var1 . "&isdtp=vw&isWsVw=true&nonce=02541659de9dde0d96e44d154840e14be6f2bb3fcc1022859c569e3e55629581&sfdcIFrameOrigin=https%3A%2F%2Fixl.my.salesforce.com"
         ClipWait
         Clipboard := var2
         sleep, 500
@@ -335,3 +304,50 @@ Return
 E-MAIL TEMPLATES FOR TEMPS TO USE
 */
 ;----------------------------------- INTRODUCTIONS-------------------------------------------------------------------------------------------------------------
+
+
+;--------------------------------------------------- FORREST'S FUNKY FUNCTIONS ---------------------------------------------------------------------------------
+
+;search google
+^+f::
+Clipboard =
+Send ^c
+ClipWait
+contents := Clipboard
+winactivate ahk_exe chrome.exe
+Send ^t
+sleep, 250
+Send, ^v
+Send, {enter}
+Return
+
+^+e::
+Clipboard =
+send ^c
+
+ClipWait
+
+contents := Clipboard
+
+FileAppend, `n`n`n`n%contents%`n`n`n, %A_Desktop%\e-mail.txt
+
+MsgBox, Stuff done
+
+^+a::
+Clipboard =
+Send ^c
+ClipWait
+contents := Clipboard
+contentsTrimmed = %contents%
+Send, ^t
+var1 := "https://ixl.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=0JZ&sen=001&sen=02s&sen=068&sen=003&sen=00T&sen=00U&sen=005&sen=500&sen=00O&str=" . contentsTrimmed
+var2 := var1 . "&isdtp=vw&isWsVw=true&nonce=02541659de9dde0d96e44d154840e14be6f2bb3fcc1022859c569e3e55629581&sfdcIFrameOrigin=https%3A%2F%2Fixl.my.salesforce.com"
+ClipWait
+Clipboard := var2
+sleep, 500 ;wait for page to load
+Send, ^v
+Send, {enter}
+Clipboard := contentsTrimmed
+return
+
+:?*:xfileupload::https://www.ixl.com/admin/upload-roster
