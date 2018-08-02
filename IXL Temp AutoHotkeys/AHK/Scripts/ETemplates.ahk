@@ -365,7 +365,7 @@ The last column in the student file will allow you to add students to your teach
 
 If a teacher has a trial account, please exclude them from the teacher list. They will receive instructions on how to merge their account into the new subscription.
 
-Once the file is ready, please upload it to our secure uploading page using the following link: https://www.ixl.com/admin/upload-roster
+Once the file is ready, please upload it to our secure uploading page using the following link: xxx
 
 Then follow the instructions on that page to format your files and upload your roster. For your convenience, here is a link to our Upload Roster Quick Start Guide (https://www.ixl.com/userguides/IXLQuickStart_UploadRoster.pdf).
 
