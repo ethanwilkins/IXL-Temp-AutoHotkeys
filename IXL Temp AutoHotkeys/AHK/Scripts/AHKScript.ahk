@@ -351,3 +351,5 @@ Clipboard := contentsTrimmed
 return
 
 :?*:xfileupload::https://www.ixl.com/admin/upload-roster
+
+:?*:xadmin::https://www.ixl.com/admin/students
